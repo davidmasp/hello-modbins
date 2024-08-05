@@ -11,6 +11,9 @@ process sayHello {
     """
 }
 
+include { sayHello2 } from './modules/base'
+
 workflow {
   Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola') | sayHello | view
+  Channel.of('Bonjour', 'Ciao', 'Hello', 'Hola') | sayHello2 | view
 }
