@@ -1,5 +1,7 @@
 #!/usr/bin/env nextflow
 
+nextflow.enable.moduleBinaries = true
+
 process sayHello {
   input: 
     val x
